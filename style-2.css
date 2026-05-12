@@ -1,0 +1,55 @@
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu li {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sub-menu {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* display: none; */
+    display: block;
+    opacity: 0;  /* If not transition amimation don't work */
+    visibility: hidden;  /* If not sub-menu still clickable */
+    transform: translateY(10px);
+    transition: 0.2s ease;
+}
+
+.sub-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.menu li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sub-menu li {
+    display: block;
+}
+
+.sub-menu li:hover {
+    background-color: #eee;
+}
+
+
+
